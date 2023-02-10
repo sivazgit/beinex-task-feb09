@@ -1,0 +1,22 @@
+<div class="container">
+
+    <!-- string interpolation -->
+    <h2>Welcome {{head}} </h2>
+    <div class="card" style="width: 18rem;">
+        <img src="/assets/images/book.jfif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p [innerText]="author"></p>
+        </div>
+      </div>
+      <div class="binds">
+        <button [disabled]="isDisabled" class="btn btn-outline">Interested</button>
+        <p [class]="myClass">Genre : Popular Science</p>
+        <p [class.purple]="true">Original language : English</p>
+        <p [style.color]="'green'">Awards: Hugo Award for Best Related Work</p>
+        <p [style.color]="status=='error' ? 'red' : 'grey'">Originally published: 1980</p>
+        <button id="second" (click)="onSave()">Order Now</button>
+        <p>{{clicks}}</p>
+        <input type="text" name="value" [(ngModel)]="value">
+        <!-- <p>{{value}}</p> -->
+      </div>
+</div>
